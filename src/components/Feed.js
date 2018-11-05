@@ -62,29 +62,29 @@ class Feed extends Component{
 					footer={<div>Footer</div>}
 					bordered
 					dataSource={this.state.posts}
-					pagination={true}
+					pagination={{
+						pageSize:10
+					}}
 					positon={'bottom'}
 					renderItem={item=>(
 						<List.Item>{
-							<div>
-								<Row>
-									<Col span={6}>
-										<PostPreview type={item.type}></PostPreview>
-									</Col>
-									<Col span={18}>
-										<h1>{item.title}</h1>
-										<h6>{item.timestamp===undefined?'timestamp unavailable':item.timestamp.toString()}</h6>
-										<h2>{item.description}</h2>
-										<Tag> tag1</Tag>
-										<Tag> tag2</Tag>
-									</Col>
+							<Row>
+								<Col span={6}>
+									<PostPreview type={item.type}></PostPreview>
+								</Col>
+								<Col span={18}>
+									<h1>{item.title}</h1>
+									<h6>{item.timestamp===undefined?'timestamp unavailable':item.timestamp.toString()}</h6>
+									<h2>{item.description}</h2>
+									{item.tags.map((tag)=>{
+										return(<Tag>{tag}</Tag>)
+									})}
+								</Col>
 								</Row>
-								
-								
-							</div>
 						}</List.Item>
 					)}
-					size="large"
+					itemLayout="vertical"
+    				size="large"
 					>
 				</List>
 					

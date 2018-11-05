@@ -1,12 +1,37 @@
 import React, {Component} from 'react';
 import {Player} from 'video-react';
+import FirebaseUtil from '../FirebaseUtil';
 // import "./node_modules/video-react/dist/video-react.css"; 
 
 export default class PostPreview extends Component{
+	constructor(props){
+		super(props);
+		this.state={
+			type:'pre-load',
+			fileName:'default'
+		}
+	}
+
+	componentDidMount(){
+		// switch(this.props.type){
+		// 	case "image":
+		// 		FirebaseUtil.getImageUrl(this.props.filename)
+		// 			.then(url=>{
+		// 				this.setState({
+		// 					type:'image',
+		// 					fileName:url
+		// 				})
+		// 			})
+		// 			.catch(err=>console.log(err));
+		// 	break;
+		// }
+	}
+
 	render(){
-		switch(this.props.type){
+		console.log(FirebaseUtil);
+		switch(this.state.type){
 			case "image":
-				return(<img src="https://sf.tac-cdn.net/images/products/large/FTD-BD2.jpg"/>)
+					return(<img src={this.state.fileName}/>)
 				break;
 			case "video":
 				return(
@@ -19,6 +44,9 @@ export default class PostPreview extends Component{
 				break;
 			case "text":
 					return(<p>text of the post goes here</p>)
+				break;
+			case "pre-load":
+				return(<p>loading</p>)
 				break;
 			default:
 					return(<p>no preview available</p>)
