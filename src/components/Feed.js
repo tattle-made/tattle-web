@@ -79,6 +79,8 @@ class Feed extends Component{
 									{item.tags.map((tag)=>{
 										return(<Tag>{tag}</Tag>)
 									})}
+									<br />
+									<a href={"https://www.google.com/maps/?q=40.72072072072072,-73.9598470162578"+item.location.latitude+","+item.location.longitude}>location</a>
 								</Col>
 								</Row>
 						}</List.Item>

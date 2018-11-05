@@ -29,18 +29,20 @@ export default class PostPreview extends Component{
 
 	render(){
 		console.log(FirebaseUtil);
-		switch(this.state.type){
+		switch(this.props.type){
 			case "image":
-					return(<img src={this.state.fileName}/>)
+					// return(<img src={this.state.fileName}/>)
+					return(<img src="https://pbs.twimg.com/profile_images/883859744498176000/pjEHfbdn_400x400.jpg"/>)
 				break;
 			case "video":
-				return(
-					<Player
-					      playsInline
-					      width={25}
-					      src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4"
-			      	/>
-				)
+				// return(
+				// 	<Player
+				// 	      playsInline
+				// 	      width={25}
+				// 	      src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4"
+			 //      	/>
+				// )
+				return(<p> loading video</p>)
 				break;
 			case "text":
 					return(<p>text of the post goes here</p>)
