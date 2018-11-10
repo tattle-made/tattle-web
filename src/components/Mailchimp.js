@@ -1,13 +1,21 @@
 import React, {Component} from 'react';
 import MailchimpSubscribe from 'react-mailchimp-subscribe';
+import styled from 'styled-components';
+
+const MailChimpSection = styled.section`
+	margin-top: 4em;
+	.something : {
+		color : red;
+	}
+`;
 
 export default class MailChimp extends Component{
 	render(){
 		return (
-			<div>
-				<h2>Subscribe for Updates</h2>
+			<MailChimpSection>
+				<h2 className="something">Subscribe for Updates</h2>
 				<MailchimpSubscribe url={'http://eepurl.com/dM-5VQ'}/>
-			</div>
+			</MailChimpSection>
 		)
 	}
 }
