@@ -4,15 +4,18 @@ import styled from 'styled-components';
 
 const MailChimpSection = styled.section`
 	margin-top: 4em;
-	.something : {
-		color : red;
-	}
 `;
+
+class MyForm extends Component{
+	render(){
+		return(<div>form</div>);
+	}
+}
 
 export default class MailChimp extends Component{
 	render(){
 		return (
-			<MailChimpSection>
+			<MailChimpSection className="mailchimp"> 
 				<h2 className="something">Subscribe for Updates</h2>
 				<MailchimpSubscribe url={'http://eepurl.com/dM-5VQ'}/>
 			</MailChimpSection>
