@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Player} from 'video-react';
-import FirebaseUtil from '../FirebaseUtil';
+//import FirebaseUtil from '../FirebaseUtil';
 // import "./node_modules/video-react/dist/video-react.css"; 
 
 export default class PostPreview extends Component{
@@ -28,7 +28,7 @@ export default class PostPreview extends Component{
 	}
 
 	render(){
-		console.log(FirebaseUtil);
+		//console.log(FirebaseUtil);
 		switch(this.props.type){
 			case "image":
 					// return(<img src={this.state.fileName}/>)

@@ -31,7 +31,7 @@ export default class Home extends Component{
 								<ContentSection style={{'padding-top':'4em'}}>
 									<h1>Fact Checked Stories for WhatsApp Users at Scale</h1>
 									<h3>Tattle leverages technology to scale existing fact checking efforts by connecting WhatsApp users to fact checked stories in real time, making users more informed about what they read and share on WhatsApp. </h3>
-									<h5>Share viral messagesyou recieve on WhatsApp with Tattle. Be an informed user. Empower others to be the same.</h5>
+									<h5>Share viral messages you recieve on WhatsApp with Tattle. Be an informed user. Empower others to be the same.</h5>
 									<Mailchimp/>
 								</ContentSection>
 							</GridColumn>

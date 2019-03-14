@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import FirebaseUtil from '../FirebaseUtil';
+//import FirebaseUtil from '../FirebaseUtil';
 import {Layout, Popover, Button, List, Tag} from 'antd';
 import {Row, Col} from 'antd';
 import LoginForm from './LoginForm';
@@ -19,20 +19,20 @@ class Feed extends Component{
 	}
 
 	componentDidMount(){
-		const firebase = new FirebaseUtil();
-		firebase.getPosts()
-		.then((posts)=>{
-			var result = [];
-			posts.forEach((doc)=>{
-				result.push(doc.data());
-			})
-			this.setState({
-				currentPage : 1,
-				posts : result
-			})
-			console.log(this.state);
-		})
-		.catch(err=>console.log(err))
+		// const firebase = new FirebaseUtil();
+		// firebase.getPosts()
+		// .then((posts)=>{
+		// 	var result = [];
+		// 	posts.forEach((doc)=>{
+		// 		result.push(doc.data());
+		// 	})
+		// 	this.setState({
+		// 		currentPage : 1,
+		// 		posts : result
+		// 	})
+		// 	console.log(this.state);
+		// })
+		// .catch(err=>console.log(err))
 	}
 
 	render(){
